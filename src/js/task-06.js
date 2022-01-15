@@ -1,8 +1,13 @@
 const inputEl = document.getElementById('validation-input');
+const dataLengthMinimum = inputEl.dataset.length;
 
-console.log(inputEl);
 
 inputEl.addEventListener("blur", (event) => {
-    console.log('blur occured');
-    inputEl.value = "";
+
+   console.log('event.target.value.length', event.target.value.length)
+   console.log('dataLengthMinimum', dataLengthMinimum)
+
+    if(event.target.value.length > dataLengthMinimum) {
+       console.log('error! Your input below min value')
+    }
   });
