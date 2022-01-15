@@ -22,3 +22,17 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.flex-container {
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > ul {
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
