@@ -7,7 +7,11 @@ inputEl.addEventListener("blur", (event) => {
    console.log('event.target.value.length', event.target.value.length)
    console.log('dataLengthMinimum', dataLengthMinimum)
 
-    if(event.target.value.length > dataLengthMinimum) {
-       console.log('error! Your input below min value')
+    if(event.target.value.length >= Number(dataLengthMinimum)) {
+
+      inputEl.setAttribute('class', 'valid');
+     
+    } else {
+        inputEl.setAttribute('class', 'invalid');
     }
   });
