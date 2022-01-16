@@ -15,9 +15,15 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
+// const markup = images
+//   .map(image => `<li class="gallery-item flex-container"><img src="${image.url}" alt="${image.alt}" width="200"</li>`)
+//   .join("");
 
-const markup = images
-  .map(image => `<li class="gallery-item flex-container"><img src="${image.url}" alt="${image.alt}" width="200"</li>`)
-  .join("");
+const markup = images.reduce((acc, { url, alt }) => { 
+
+  acc += `<li class="gallery_item"><img src='${url}', alt='${alt}'></li>`;
+  return acc;
+},'');
+
 
 list.insertAdjacentHTML("beforeend", markup);
